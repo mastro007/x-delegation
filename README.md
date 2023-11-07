@@ -6,8 +6,9 @@ Proste API do tworzenia delegacji
 
 ## Docker
 1. Zainstaluj wszystkie zależności composera: composer install.
-2. Uruchom skrypt konfiguracji Dockera: ./vendor/bin/sail up.
-3. Uruchom skrypt migracji bazy danych: ./vendor/bin/sail migrate --seed.
+2. Zbuduj dokera `./vendor/bin/sail build --no-cache`.
+3. Uruchom skrypt konfiguracji Dockera: `./vendor/bin/sail up`.
+4. Uruchom skrypt migracji bazy danych: `./vendor/bin/sail migrate --seed`.
 
 
 ## Lokalnie
@@ -21,10 +22,10 @@ Dla lokalnej konfiguracji wymagane są:
 
 1. Zainstaluj wszystkie zależności composera: composer install.
 2. Skopiuj przykładowy plik środowiskowy i dokonaj wymaganych zmian konfiguracji w pliku .env: cp .env.example .env.
-3. Wygeneruj nowy klucz aplikacji: php artisan key:generate.
+3. Wygeneruj nowy klucz aplikacji: `php artisan key:generate`.
 4. Uruchom swój serwer MySQL i ustaw odpowiednie konfiguracje w pliku .env.
-5. Uruchom skrypt migracji bazy danych: php artisan migrate --seed.
-6. Uruchom aplikację: php artisan serve.
+5. Uruchom skrypt migracji bazy danych: `php artisan migrate --seed`.
+6. Uruchom aplikację: `php artisan serve`.
 
 ## Testowanie
 
