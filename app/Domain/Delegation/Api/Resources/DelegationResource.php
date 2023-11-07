@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources;
+namespace App\Domain\Delegation\Api\Resources;
 
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use Illuminate\Http\Resources\Json\JsonResource;
 
 /**
  * @class DelegationResource
- * @package \App\Http\Resources\DelegationResource
+ * @package \App\Domain\Delegation\Api\Resources\DelegationResource
  * @property Carbon $start
  * @property Carbon $end
  * @property string $country

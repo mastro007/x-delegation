@@ -1,18 +1,18 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Api\v1;
+namespace App\Domain\Delegation\Api\Controllers\v1;
 
 
+use App\Domain\Delegation\Api\Resources\WorkerResource;
 use App\Http\Controllers\Controller;
-use App\Http\Resources\WorkerResource;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Response;
 use Worker as WorkerService;
 
 /**
  * @class WorkerController
- * @package \App\Http\Api\v1\WorkerController
+ * @package \App\Domain\Delegation\Api\Controllers\v1\WorkerController
  */
 class WorkerController extends Controller
 {

@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class WorkerControllerTest extends TestCase
@@ -13,7 +12,7 @@ class WorkerControllerTest extends TestCase
 
     public function test_can_create_worker(): void
     {
-        $response = $this->postJson('/api/v1/workers');
+        $response = $this->postJson(route('api.workers.store'));
         $response->assertSuccessful();
         $response->assertStatus(200);
         $response->assertJsonStructure([

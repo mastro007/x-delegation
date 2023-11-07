@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Requests;
+namespace App\Domain\Delegation\Api\Requests;
 
 use App\Domain\Delegation\Enums\CountryCodeEnum;
 use Illuminate\Foundation\Http\FormRequest;
@@ -9,7 +9,7 @@ use Illuminate\Validation\Rules\Enum;
 
 /**
  * @class DelegationStoreRequest
- * @package \App\Http\Requests\DelegationStoreRequest
+ * @package \App\Domain\Delegation\Api\Requests\DelegationStoreRequest
  */
 class DelegationStoreRequest extends FormRequest
 {

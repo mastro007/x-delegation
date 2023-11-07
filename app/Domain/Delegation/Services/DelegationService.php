@@ -49,7 +49,7 @@ class DelegationService
 
     /**
      * @return Collection
-     * @uses \App\Http\Api\v1\DelegationController
+     * @uses \App\Domain\Delegation\Api\Controllers\v1\DelegationController
      */
     public function fetchAll(): Collection
     {

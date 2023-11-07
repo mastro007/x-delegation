@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace App\Http\Api;
+namespace App\Domain\Delegation\Api\Controllers;
 
 use App\Http\Controllers\Controller;
 use Carbon\Carbon;

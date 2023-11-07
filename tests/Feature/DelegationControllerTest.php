@@ -3,11 +3,11 @@
 namespace Tests\Feature;
 
 
+use App\Domain\Delegation\Api\Requests\DelegationStoreRequest;
 use App\Domain\Delegation\Enums\CountryCodeEnum;
 use App\Domain\Delegation\Exceptions\DelegationException;
 use App\Domain\Delegation\Models\Delegation;
 use App\Domain\Delegation\Models\Worker;
-use App\Http\Requests\DelegationStoreRequest;
 use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\CreatesApplication;

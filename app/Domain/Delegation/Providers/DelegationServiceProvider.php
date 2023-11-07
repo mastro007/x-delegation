@@ -14,6 +14,21 @@ class DelegationServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->registerFacades();
+    }
+
+    /**
+     * Bootstrap services.
+     */
+    public function boot(): void
+    {
+        $this->loadRoutesFrom(__DIR__. '/../Routes/api.php');
+        $this->loadMigrationsFrom(__DIR__.'/../DB/Migrations');
+        $this->mergeConfigFrom(__DIR__.'/../Config/services.php', 'services');
+    }
+
+    protected function registerFacades(): void
+    {
         $this->app->bind(DelegationService::class, fn() => new DelegationService(
             bonusDays: config('services.delegation.bonus_days'),
             bonusRate: config('services.delegation.bonus_rate'),
@@ -24,14 +39,5 @@ class DelegationServiceProvider extends ServiceProvider
         $this->app->bind(WorkerService::class, fn() => new WorkerService(
             company: config('services.worker.company')
         ));
-    }
-
-    /**
-     * Bootstrap services.
-     */
-    public function boot(): void
-    {
-        $this->loadMigrationsFrom(__DIR__.'/../DB/Migrations');
-        $this->mergeConfigFrom(__DIR__.'/../Config/services.php', 'services');
     }
 }
