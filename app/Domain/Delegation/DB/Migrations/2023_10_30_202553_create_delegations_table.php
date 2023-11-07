@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('delegations', function (Blueprint $table) {
             $table->id();
-            $table->char('worker_id', 32);
+            $table->char('worker_id', config('services.worker.id_length'));
             $table->foreign('worker_id')->references('id')->on('workers');
             $table->dateTime('start');
             $table->dateTime('end');
