@@ -65,8 +65,8 @@ class DelegationServiceTest extends TestCase
     {
         $worker = Worker::factory()->create();
         $start = Carbon::now()->hours(8);
-        $end = Carbon::now()->hours(12)->addDays(20);
-        $country = CountryCodeEnum::DE;
+        $end = Carbon::now()->hours(12)->addDays(9);
+        $country = CountryCodeEnum::PL;
 
         $value = $this->delegationService->calculateExtraDiet(
             new DelegationDTO(
@@ -77,7 +77,7 @@ class DelegationServiceTest extends TestCase
             )
         );
 
-        $this->assertTrue($value === 1400);
+        $this->assertTrue($value === 40);
     }
 
     public function test_bonus_is_not_included()

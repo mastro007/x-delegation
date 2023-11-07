@@ -136,7 +136,7 @@ class DelegationService
     {
         $days = 0;
         if ($this->isBonus($delegation)) {
-            $start = $delegation->start->copy()->addDays($this->bonusDays);
+            $start = $delegation->start->copy()->addDays($this->bonusDays)->addDay();
             /* @var Carbon $day */
             foreach ($this->getDateRange($start, $delegation->end) as $day) {
                 if ($this->isDayIncluded($day)) {
