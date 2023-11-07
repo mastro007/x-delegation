@@ -56,7 +56,17 @@ Dla lokalnej konfiguracji użyj: `php artisan test`
 - **URL:** `/api/v1/workers`
 - **Metoda:** `POST`
 - **Parametry:** Brak
-- **Body:** Brak
+- **Body:**
+ ```json
+    {
+     "status":"success",
+     "data":
+     {
+      "id":"id_pracownika",
+      "company":"X"
+     }
+    }
+ ```
 
 
 
